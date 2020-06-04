@@ -1,12 +1,12 @@
 {
-  "name": "webpack-pwa-manifest",
+  "name": "webpack-pwa-manifest-contrib",
   "version": "4.2.0",
   "description": "Progressive Web Application (PWA) Manifest Generator",
   "main": "index.js",
   "types": "index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arthurbergmz/webpack-pwa-manifest.git"
+    "url": "https://github.com/Den-dp/webpack-pwa-manifest.git"
   },
   "keywords": [
     "pwa",
@@ -22,7 +22,7 @@
     "application"
   ],
   "scripts": {
-    "build": "npx babel src --out-dir dist",
+    "build": "rimraf dist && npx babel src --out-dir dist",
     "clean": "rimraf -rf tests/*/output && rimraf -rf dist",
     "test": "npm run clean && npm run build && node tests/index.js",
     "test:debug": "npm run clean && npm run build && node --inspect-brk ./tests/index.js"
